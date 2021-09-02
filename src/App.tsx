@@ -3,11 +3,12 @@ import './App.css'
 import { Switch, Route, withRouter } from 'react-router-dom'
 
 import Greeting from './slides/greeting'
+import SimpleMessenger from './slides/messenger'
 
 function App() {
     return <Switch>
-        <Route path='/' component={ () => <Greeting next='set' /> } />
-        <Route path='/set' component={ () => <Greeting next='/' /> } />
+        <Route path='/msg' component={ () => <SimpleMessenger next='/' /> } />
+        <Route path='/' component={ () => <Greeting next='msg' /> } />
     </Switch>
 }
 
